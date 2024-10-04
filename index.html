@@ -123,6 +123,35 @@ footer a:hover, footer a:focus {
   text-shadow: 0 0 8px #ffffff; /* Adds a glowing effect to the text */
   transition: background-color 0.3s, color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effects */
 }
+
+/* Scrollbar styling */
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7f00ff #0a0f20; /* Thumb and track */
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px; /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
+}
+
+*::-webkit-scrollbar-track {
+  background: #0a0f20; /* Deep blue background for the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #7f00ff; /* Neon purple for the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #0a0f20; /* Deep blue border */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #a280ff; /* Lighter purple when hovered */
+}
+
   </style>
 </head>
 
