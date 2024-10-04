@@ -4,227 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gavin Koli Portfolio</title>
-  <style>
-
-
-
-    /* Add your CSS styles here */
-    #bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; /* Ensures the video stays behind other content */
-  object-fit: cover; /* Ensures the video covers the entire screen */
-}
-
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
-    header {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  color: white;
-  padding: 10px 20px; /* Adds padding around the text */
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-}
-
-header {
-  background-color: #0a0f20; /* Deep blue background */
-  color: white;
-  padding: 11.5px 23px; /* Increased by 15% */
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1309px; /* Increased width by 15% */
-  margin: 0 auto;
-}
-
-#name-link {
-  color: white;
-  text-decoration: none;
-  font-size: 23px; /* Increase the font size to match the overall increase */
-  padding: 9.2px 17.25px; /* Increased padding by 15% */
-}
-
-header nav ul {
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li {
-  margin-right: 23px; /* Increased margin by 15% */
-}
-
-header nav ul li a, #name-link {
-  color: white;
-  text-decoration: none;
-  padding: 9.2px 17.25px; /* Uniform padding */
-  border-radius: 5px;
-}
-
-header nav ul li a:hover, #name-link:hover, header nav ul li a:focus, #name-link:focus {
-  background-color: #7f00ff; /* Neon purple-like color for highlight */
-  color: #ffffff;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-}
-
-    section {
-      padding: 100px 20px;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    footer {
-  background-color: #0a0f20; /* Deep blue background */
-  color: white;
-  text-align: center;
-  padding: 18px 36px; /* Slightly larger padding for a more substantial footer */
-  position: relative; /* Position relative to allow it to sit at the bottom of the content */
-  bottom: 0;
-  width: 100%;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px; /* Padding for clickable areas */
-  border-radius: 5px; /* Rounded corners for links */
-}
-
-footer a:hover, footer a:focus {
-  background-color: #7f00ff; /* Neon purple-like color for highlight */
-  color: #ffffff;
-  text-shadow: 0 0 8px #ffffff; /* Adds a glowing effect to the text */
-  transition: background-color 0.3s, color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effects */
-}
-
-/* Scrollbar styling */
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #7f00ff #0a0f20; /* Thumb and track */
-}
-
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 12px; /* Vertical scrollbar width */
-  height: 12px; /* Horizontal scrollbar height */
-}
-
-*::-webkit-scrollbar-track {
-  background: #0a0f20; /* Deep blue background for the track */
-  border-radius: 10px; /* Rounded corners for the track */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #7f00ff; /* Neon purple for the thumb */
-  border-radius: 10px; /* Rounded corners for the thumb */
-  border: 3px solid #0a0f20; /* Deep blue border */
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #a280ff; /* Lighter purple when hovered */
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
-<!-- Video Background -->
-<video autoplay muted loop id="bg-video">
-    <source src="videos/BG_vid.mp4" type="video/mp4">
+  <video autoplay muted loop id="bg-video">
+    <source src="BG_vid.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-
-  <!-- Header and Navigation Bar -->
   <header>
+    <a href="#" id="name-link">Gavin Koli</a>
     <nav>
-      <a href="#" id="name-link">Gavin Koli</a> <!-- This will take the user to the top of the page -->
-      <div id="nav-links">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <button id="nav-toggle" aria-label="Open navigation menu">&#9776;</button>
+      <div id="nav-links" class="nav-collapse">
+          <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
       </div>
     </nav>
   </header>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p>Hi, I'm Gavin Koli, a Data Analyst and Software Developer specializing in machine learning and data visualization. I’m passionate about transforming data into actionable insights and driving business success through technology.</p>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
     <h2>My Projects</h2>
-    <div class="project">
-      <h3>FIFA World Cup 2022 Player Analysis</h3>
-      <p>Used machine learning to predict top-performing players with 90% accuracy. Technologies: Python, Pandas, Scikit-learn.</p>
-      <a href="https://github.com/gavinkoli/fifa-analysis" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>Health and Fitness Application</h3>
-      <p>Developed a cross-platform mobile app for tracking diet and fitness schedules. Technologies: Python, Java, SQL.</p>
-      <a href="https://github.com/gavinkoli/fitness-app" target="_blank">View on GitHub</a>
-    </div>
+    <!-- Project details here -->
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: Python, SQL, C/C++, Java</li>
-      <li>Python Libraries: Pandas, Matplotlib, Scikit-learn</li>
-      <li>Data Visualization: Power BI, Tableau</li>
-      <li>Project Management: Agile, Scrum</li>
-    </ul>
+    <!-- Skills list here -->
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:gavinkoli@example.com">gavinkoli@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/gavinkoli" target="_blank">linkedin.com/in/gavinkoli</a></p>
-    <p>GitHub: <a href="https://github.com/gavinkoli" target="_blank">github.com/gavinkoli</a></p>
+    <!-- Contact details here -->
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Gavin Koli</p>
-    <p><a href="https://linkedin.com/in/gavinkoli">LinkedIn</a> | <a href="https://github.com/gavinkoli">GitHub</a></p>
+    <p><a href="https://linkedin.com/in/gavinkoli" target="_blank">LinkedIn</a> | <a href="https://github.com/gavinkoli" target="_blank">GitHub</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
