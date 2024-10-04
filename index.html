@@ -101,14 +101,28 @@ header nav ul li a:hover, #name-link:hover, header nav ul li a:focus, #name-link
     }
 
     footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
+  background-color: #0a0f20; /* Deep blue background */
+  color: white;
+  text-align: center;
+  padding: 18px 36px; /* Slightly larger padding for a more substantial footer */
+  position: relative; /* Position relative to allow it to sit at the bottom of the content */
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px; /* Padding for clickable areas */
+  border-radius: 5px; /* Rounded corners for links */
+}
+
+footer a:hover, footer a:focus {
+  background-color: #7f00ff; /* Neon purple-like color for highlight */
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff; /* Adds a glowing effect to the text */
+  transition: background-color 0.3s, color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effects */
+}
   </style>
 </head>
 
