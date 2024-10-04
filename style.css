@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Ensures the full height of the viewport is covered */
+    width: 100%;   /* Ensures the full width of the viewport is covered */
+    overflow: hidden;  /* Prevents scrolling */
+    background-color: #000; /* Fallback color in case the video fails to load */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;  /* Aligns the video at the top-left corner */
+    left: 0;
+    min-width: 100%;  /* Minimum coverage of the viewport */
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;  /* Ensures the video stays in the background */
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    z-index: 10;  /* Makes sure the header is above the video */
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    position: relative;
+    z-index: 10;  /* Makes sure the footer is above the video */
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
