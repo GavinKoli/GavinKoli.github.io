@@ -28,32 +28,69 @@
     }
 
     header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-    }
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: white;
+  padding: 10px 20px; /* Adds padding around the text */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
 
-    header nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
+header {
+  background-color: #0a0f20; /* Deep blue background */
+  color: white;
+  padding: 11.5px 23px; /* Increased by 15% */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 
-    header nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1309px; /* Increased width by 15% */
+  margin: 0 auto;
+}
 
-    header nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
+#name-link {
+  color: white;
+  text-decoration: none;
+  font-size: 23px; /* Increase the font size to match the overall increase */
+  padding: 9.2px 17.25px; /* Increased padding by 15% */
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-right: 23px; /* Increased margin by 15% */
+}
+
+header nav ul li a, #name-link {
+  color: white;
+  text-decoration: none;
+  padding: 9.2px 17.25px; /* Uniform padding */
+  border-radius: 5px;
+}
+
+header nav ul li a:hover, #name-link:hover, header nav ul li a:focus, #name-link:focus {
+  background-color: #7f00ff; /* Neon purple-like color for highlight */
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
 
     section {
       padding: 100px 20px;
@@ -88,14 +125,16 @@
   <!-- Header and Navigation Bar -->
   <header>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#" id="name-link">Gavin Koli</a> <!-- This will take the user to the top of the page -->
+      <div id="nav-links">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    <h1>Gavin Koli</h1>
   </header>
 
   <!-- About Section -->
